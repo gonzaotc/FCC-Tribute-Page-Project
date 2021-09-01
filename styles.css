@@ -1,0 +1,253 @@
+
+/* */
+@font-face {
+	src: url(fonts/RomanSD.ttf);
+	font-family: RomanSD;
+}
+
+@font-face {
+	src: url(fonts/HinaMincho.ttf);
+	font-family: HinaMincho;
+}
+
+html {
+	scroll-behavior: smooth; /*Para relentizar desplazamiento del inicio al main */
+	color: white;
+}
+
+* { /*Aplico ésta font-family a todos los elementos, que luego pueden ser sobre-escritos particularmente. */
+	font-family: HinaMincho;
+}
+
+body {
+   background-color: black;
+}
+
+.wrapper{
+	display: flex;
+	flex-direction: column;
+}
+
+header {
+	background: url(images/marcofondo.jpg);
+	background-size: cover;
+	background-position: top center;/* Esto hace que la imagen quede en el centro para distintos tamaños de pantalla */
+	height: 100vh;
+	position: relative;/* position relative para que el hijo de position absolute tenga de donde agarrarse */
+	display: flex;
+	align-items: center; /* Centro el titulo */
+	justify-content: center; /* Centro el titulo */
+}
+/* Capa adicionál para la opacidad de la imagen del header */
+header::before {
+	content: "";
+	width: 100%;
+	height: 100%;
+	background: radial-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 1));
+	/* Si quisiera, podria hacer una capa de linear-gradient de más de un color, pero elegí negro para difuminar los costados*/
+	/* background: linear-gradient(200deg,black, red); */
+	position: absolute;
+	opacity: 1;
+}
+
+
+#title {
+	position: relative;
+	color: white;
+	font-size: 3rem;
+	text-decoration: none;
+	font-weight: 500;
+	text-align: center;
+	font-family: RomanSD;
+}
+ #title:hover {
+	 text-shadow: 2px 2px 50px rgba(0,0,0,1), -2px -2px 50px rgba(0,0,0,1),
+	              1px 1px 50px rgba(0,0,0,1), -1px -1px 50px rgba(0,0,0,1);
+				  /* Agregé 4 text shadows en distintas posiciones para aumentar la intensidad.*/
+ }
+
+
+main {
+	/* border: 5px solid goldenrod; */
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+#img-div {	
+	/* border: 3px solid cyan; */
+	margin: 0 10%;
+	margin-top: 10%;
+	margin-bottom: 3%;
+	display: flex;
+	/* max-width: 2000px;30 */
+ }
+
+figure { /* figure is full contained by the img-div */
+	/* border: 2px solid purple; */
+	margin: 0;
+    min-width: 400px;
+	max-width: 600px;
+	text-align: center;
+	flex: 1 1;
+	align-self: center;
+}
+
+figcaption {
+	padding-top: 7px;
+	padding-bottom: 30px;
+	font-style: italic;
+	font-size: 1.6rem;
+}
+
+
+#InformationParrafe {
+	/* border: 2px solid purple; */
+	font-size: 1.8rem;
+	font-weight: 100;
+	margin-left: 10%;
+	flex: 1 10;
+	min-width: 300px;
+	line-height: 1.2;
+}
+
+
+#tribute-info {
+	/* border: 2px solid red; */
+	font-size: 1.3rem;
+	margin:0 10%;
+}
+
+
+@media (max-width: 1200px){ /*Para pantallas chicas, paso el texto abajo */
+    #img-div{
+		flex-direction: column;
+		display: flex;
+	}
+}
+
+.frase {  /* Frases */
+	font-style: italic;
+	font-weight: 100;
+	font-size: 2rem;
+}
+.color1 {
+ color: orange;
+ 
+}
+.color2 {
+	color: yellow;
+}
+
+.responsive { /*Vuelvo responsive la imagen*/
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+	filter: grayscale(0.5); /* Le aplico filtro en escala de grises para amoldar al estilo */
+	border-radius: 0.2em;
+}
+
+
+#tribute-link {
+	margin: 5rem 5%;
+	/* border: 4px solid green; */
+	text-align: center;
+	font-size: 1.6rem;
+}
+
+#wikipedia {
+	position: relative;
+	color: cyan;
+	text-decoration: none;
+}
+
+
+/* CSS #wikipedia animation  */
+#wikipedia::after {
+	content: "";
+	position: absolute;
+	background-color: cyan;
+	height: 3px;
+	width: 0px;
+	bottom: -5px;
+	left: 5px;
+	transition: 0.5s;
+}
+#wikipedia:hover:after {
+	width: 93%;
+	transition: 0.5s;
+} 
+ /* CSS Title end of animation  */
+
+
+#library-title {
+	/* border: 3px solid blue; */
+	padding-top: 5%;
+	margin: 0 5%;
+	margin-bottom: 2%;
+	border-top: 10px double grey;
+	text-align: center;
+	font-family: RomanSD;
+	font-size: 1.8em;
+}
+
+
+#bookscontainer{
+	margin: 0 100px ;
+	/* border: 3px solid lightslategray; */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.bookitem {
+	box-sizing: border-box;
+	flex: 1 1 calc(80%/2);
+	margin: 5% 5%;
+	justify-content: space-around;
+	/* margin: 1%; */
+}
+
+.bookimg {
+	width: 100%;
+	height: 100%;
+	object-fit: fill;
+	border-radius: 2%;
+	transition: 1s;
+}
+.bookimg:hover {
+ transform: scale(1.2);
+ transition: 0.7s;
+}
+
+/* Media queries for ammount of books for determinate screen sizes */
+@media (min-width: 768px) {
+	.bookitem {
+		flex-basis: calc(84%/4);
+		margin: 2% 2%;
+	}
+
+}
+
+@media (min-width: 1500px) {
+	.bookitem {
+		flex-basis: calc(84%/8);
+		margin: 1% 1%;
+	}
+
+	#library-title {
+		font-size: 3rem;
+	}
+}
+
+
+footer{
+border-top: 10px double grey;
+padding-top: 5%;
+margin: 0 10%;
+margin-top: 5%;
+margin-bottom: 2%;
+/* border: 3px solid blue; */
+text-align: center;
+font-size: 1.5rem;
+}
