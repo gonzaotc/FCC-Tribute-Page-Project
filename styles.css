@@ -1,12 +1,11 @@
-
 /* */
 @font-face {
-	src: url(fonts/RomanSD.ttf);
+	src: url(https://raw.githubusercontent.com/gonzaotc/TributePage/blob/main/fonts/RomanSD.ttf);
 	font-family: RomanSD;
 }
 
 @font-face {
-	src: url(fonts/HinaMincho.ttf);
+	src: url(https://raw.githubusercontent.com/gonzaotc/TributePage/blob/main/fonts/HinaMincho.ttf);
 	font-family: HinaMincho;
 }
 
@@ -29,7 +28,7 @@ body {
 }
 
 header {
-	background: url(images/marcofondo.jpg);
+	background: url(https://github.com/gonzaotc/TributePage/blob/main/images/marcofondo.jpg?raw=true);
 	background-size: cover;
 	background-position: top center;/* Esto hace que la imagen quede en el centro para distintos tamaños de pantalla */
 	height: 100vh;
@@ -66,6 +65,15 @@ header::before {
 				  /* Agregé 4 text shadows en distintas posiciones para aumentar la intensidad.*/
  }
 
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
 
 main {
 	/* border: 5px solid goldenrod; */
@@ -87,7 +95,7 @@ main {
 figure { /* figure is full contained by the img-div */
 	/* border: 2px solid purple; */
 	margin: 0;
-    min-width: 400px;
+  min-width: 300px;
 	max-width: 600px;
 	text-align: center;
 	flex: 1 1;
@@ -106,9 +114,9 @@ figcaption {
 	/* border: 2px solid purple; */
 	font-size: 1.8rem;
 	font-weight: 100;
-	margin-left: 10%;
+	margin: 0 5%;
 	flex: 1 10;
-	min-width: 300px;
+	min-width: 200px;
 	line-height: 1.2;
 }
 
@@ -116,7 +124,7 @@ figcaption {
 #tribute-info {
 	/* border: 2px solid red; */
 	font-size: 1.3rem;
-	margin:0 10%;
+	margin: 0 5%;
 }
 
 
@@ -194,7 +202,7 @@ figcaption {
 
 
 #bookscontainer{
-	margin: 0 100px ;
+	margin: 0 5% ;
 	/* border: 3px solid lightslategray; */
     display: flex;
     flex-wrap: wrap;
