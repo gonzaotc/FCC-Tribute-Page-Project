@@ -149,7 +149,7 @@ figcaption {
 	color: yellow;
 }
 
-.responsive { /*Vuelvo responsive la imagen*/
+#image { /*Vuelvo responsive la imagen*/
 	width: 100%;
 	height: auto;
 	margin: 0 auto;
