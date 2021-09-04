@@ -94,7 +94,6 @@ main {
 
 figure { /* figure is full contained by the img-div */
 	/* border: 2px solid purple; */
-	max-width: 600px;
 	text-align: center;
 	flex: 1 1;
 	align-self: center;
@@ -155,6 +154,8 @@ figcaption {
 	margin: 0 auto;
 	filter: grayscale(0.5); /* Le aplico filtro en escala de grises para amoldar al estilo */
 	border-radius: 0.2em;
+	max-width: 600px;
+	display: block;
 }
 
 
