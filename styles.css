@@ -158,14 +158,14 @@ figcaption {
 }
 
 
-#tribute-link {
+#tribute-div {
 	margin: 5rem 5%;
 	/* border: 4px solid green; */
 	text-align: center;
 	font-size: 1.6rem;
 }
 
-#wikipedia {
+#tribute-link {
 	position: relative;
 	color: cyan;
 	text-decoration: none;
@@ -173,7 +173,7 @@ figcaption {
 
 
 /* CSS #wikipedia animation  */
-#wikipedia::after {
+#tribute-link::after {
 	content: "";
 	position: absolute;
 	background-color: cyan;
@@ -183,7 +183,7 @@ figcaption {
 	left: 5px;
 	transition: 0.5s;
 }
-#wikipedia:hover:after {
+#tribute-link:hover:after {
 	width: 93%;
 	transition: 0.5s;
 } 
