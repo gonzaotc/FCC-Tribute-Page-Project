@@ -1,11 +1,11 @@
 /* */
 @font-face {
-	src: url(https://raw.githubusercontent.com/gonzaotc/TributePage/blob/main/fonts/RomanSD.ttf);
+	src: url(fonts/RomanSD.ttf);
 	font-family: RomanSD;
 }
 
 @font-face {
-	src: url(https://raw.githubusercontent.com/gonzaotc/TributePage/blob/main/fonts/HinaMincho.ttf);
+	src: url(fonts/HinaMincho.ttf);
 	font-family: HinaMincho;
 }
 
@@ -53,7 +53,7 @@ header::before {
 #title {
 	position: relative;
 	color: white;
-	font-size: 3rem;
+	font-size: 2rem;
 	text-decoration: none;
 	font-weight: 500;
 	text-align: center;
@@ -65,7 +65,7 @@ header::before {
 				  /* Agregé 4 text shadows en distintas posiciones para aumentar la intensidad.*/
  }
 
-.noselect {
+.noselect { /*Convierto el titulo en seleccionable, para que no se vuelva celeste */
   -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
      -khtml-user-select: none; /* Konqueror HTML */
@@ -85,7 +85,7 @@ main {
 
 #img-div {	
 	/* border: 3px solid cyan; */
-	margin: 0 10%;
+	margin: 0 7%;
 	margin-top: 10%;
 	margin-bottom: 3%;
 	display: flex;
@@ -94,8 +94,7 @@ main {
 
 figure { /* figure is full contained by the img-div */
 	/* border: 2px solid purple; */
-	margin: 0;
-  min-width: 300px;
+    min-width: 300px;
 	max-width: 600px;
 	text-align: center;
 	flex: 1 1;
@@ -112,20 +111,21 @@ figcaption {
 
 #InformationParrafe {
 	/* border: 2px solid purple; */
-	font-size: 1.8rem;
+	font-size: 1.5rem;
 	font-weight: 100;
-	margin: 0 5%;
+	margin: 10% 5%;
 	flex: 1 10;
 	min-width: 200px;
-	line-height: 1.2;
+	line-height: 1.05;
 }
 
 
 #tribute-info {
 	/* border: 2px solid red; */
-	font-size: 1.3rem;
 	margin: 0 5%;
+	/* line-height: 1.05; */
 }
+
 
 
 @media (max-width: 1200px){ /*Para pantallas chicas, paso el texto abajo */
@@ -138,7 +138,8 @@ figcaption {
 .frase {  /* Frases */
 	font-style: italic;
 	font-weight: 100;
-	font-size: 2rem;
+	font-size: 1.7rem;
+	/* line-height: 1; */
 }
 .color1 {
  color: orange;
@@ -206,6 +207,7 @@ figcaption {
 	/* border: 3px solid lightslategray; */
     display: flex;
     flex-wrap: wrap;
+	justify-content: space-evenly;
 }
 
 .bookitem {
@@ -230,9 +232,32 @@ figcaption {
 
 /* Media queries for ammount of books for determinate screen sizes */
 @media (min-width: 768px) {
+
 	.bookitem {
 		flex-basis: calc(84%/4);
 		margin: 2% 2%;
+	}
+	/* Re-sizing font sizes and margins for different screen sizes. (Visual adjustment) */
+    #title {
+    font-size: 3rem
+	}
+
+	#InformationParrafe {
+    font-size: 1.9rem;
+	margin: 10% 5%;
+	}
+
+	#img-div {
+	margin-bottom: -2%;
+	margin-top: 0;
+	}
+
+	.frase {
+		font-size: 2rem;
+	}
+
+	.bookitem {
+		/* max-width: 200px; */
 	}
 
 }
