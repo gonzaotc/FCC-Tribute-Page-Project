@@ -1,4 +1,4 @@
-/* */
+
 @font-face {
 	src: url(fonts/RomanSD.ttf);
 	font-family: RomanSD;
@@ -53,7 +53,7 @@ header::before {
 #title {
 	position: relative;
 	color: white;
-	font-size: 2rem;
+	font-size: 2.3rem;
 	text-decoration: none;
 	font-weight: 500;
 	text-align: center;
@@ -278,7 +278,7 @@ figcaption {
 footer{ /* helloo test */
 border-top: 10px double grey;
 padding-top: 5%;
-margin: 0 10%;
+margin: 0 5%;
 margin-top: 5%;
 margin-bottom: 2%;
 /* border: 3px solid blue; */
